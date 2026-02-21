@@ -1,0 +1,47 @@
+{
+  "name": "clawctl",
+  "version": "1.0.0",
+  "description": "CLI & SDK for interacting with the Clawnch ecosystem — launch tokens on Base, manage fees, agent matching, and more.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "clawctl": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "clawnch",
+    "base",
+    "token",
+    "launch",
+    "agent",
+    "crypto",
+    "clanker",
+    "sdk",
+    "cli"
+  ],
+  "author": "clwkevin",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "ora": "^8.1.1",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
